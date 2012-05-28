@@ -9,7 +9,6 @@ expression_tree Rule(const expression_tree::operands_t& ops, enviroment& env) {
         env.raise_error("Rule", "called with invalid arguments");
         return expression_tree::make_operator("Rule", ops);
     }
-
     return expression_tree::make_operator("Rule", ops);
 }
 
