@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C9F582F6-EFCB-424B-AD7C-1C88BFCE9DC9}</ProjectGuid>
+    <RootNamespace>r0math</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>mpir.lib;mpirxx.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>mpir.lib;mpirxx.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bmp_image.cpp" />
+    <ClCompile Include="builtin_accumulate.cpp" />
+    <ClCompile Include="builtin_apply.cpp" />
+    <ClCompile Include="builtin_abs.cpp" />
+    <ClCompile Include="builtin_boolean.cpp" />
+    <ClCompile Include="builtin_bytecount.cpp" />
+    <ClCompile Include="builtin_comparsion.cpp" />
+    <ClCompile Include="builtin_d.cpp" />
+    <ClCompile Include="builtin_det.cpp" />
+    <ClCompile Include="builtin_divide.cpp" />
+    <ClCompile Include="builtin_exp.cpp" />
+    <ClCompile Include="builtin_expand.cpp" />
+    <ClCompile Include="builtin_extendedgcd.cpp" />
+    <ClCompile Include="builtin_factorial.cpp" />
+    <ClCompile Include="builtin_factorinteger.cpp" />
+    <ClCompile Include="builtin_findroot.cpp" />
+    <ClCompile Include="builtin_fromdigits.cpp" />
+    <ClCompile Include="builtin_gcd.cpp" />
+    <ClCompile Include="builtin_graphics.cpp" />
+    <ClCompile Include="builtin_holdform.cpp" />
+    <ClCompile Include="builtin_integerdigits.cpp" />
+    <ClCompile Include="builtin_lcm.cpp" />
+    <ClCompile Include="builtin_length.cpp" />
+    <ClCompile Include="builtin_list.cpp" />
+    <ClCompile Include="builtin_log.cpp" />
+    <ClCompile Include="builtin_map.cpp" />
+    <ClCompile Include="builtin_minus.cpp" />
+    <ClCompile Include="builtin_n.cpp" />
+    <ClCompile Include="builtin_nest.cpp" />
+    <ClCompile Include="builtin_nestlist.cpp" />
+    <ClCompile Include="builtin_nintegrate.cpp" />
+    <ClCompile Include="builtin_numericq.cpp" />
+    <ClCompile Include="builtin_outputforms.cpp" />
+    <ClCompile Include="builtin_parametricplot.cpp" />
+    <ClCompile Include="builtin_part.cpp" />
+    <ClCompile Include="builtin_plot.cpp" />
+    <ClCompile Include="builtin_plus.cpp" />
+    <ClCompile Include="builtin_power.cpp" />
+    <ClCompile Include="builtin_primeq.cpp" />
+    <ClCompile Include="builtin_randomchoice.cpp" />
+    <ClCompile Include="builtin_range.cpp" />
+    <ClCompile Include="builtin_rational.cpp" />
+    <ClCompile Include="builtin_rule.cpp" />
+    <ClCompile Include="builtin_set.cpp" />
+    <ClCompile Include="builtin_sqrt.cpp" />
+    <ClCompile Include="builtin_table.cpp" />
+    <ClCompile Include="builtin_times.cpp" />
+    <ClCompile Include="builtin_together.cpp" />
+    <ClCompile Include="builtin_total.cpp" />
+    <ClCompile Include="builtin_trigonometric.cpp" />
+    <ClCompile Include="codeform.cpp" />
+    <ClCompile Include="color.cpp" />
+    <ClCompile Include="constant_e.cpp" />
+    <ClCompile Include="constant_pi.cpp" />
+    <ClCompile Include="enviroment.cpp" />
+    <ClCompile Include="expression_tree.cpp" />
+    <ClCompile Include="expression_tree_util.cpp" />
+    <ClCompile Include="fullform.cpp" />
+    <ClCompile Include="function_options.cpp" />
+    <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="graphics_object.cpp" />
+    <ClCompile Include="graphics_primitive.cpp" />
+    <ClCompile Include="inputform.cpp" />
+    <ClCompile Include="lexer.cpp" />
+    <ClCompile Include="list_structure_parser.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mpirxx_include.cpp" />
+    <ClCompile Include="parser_expression_tree.cpp" />
+    <ClCompile Include="symbol.cpp" />
+    <ClCompile Include="symbol_map.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bmp_image.hpp" />
+    <ClInclude Include="builtin_abs.hpp" />
+    <ClInclude Include="builtin_accumulate.hpp" />
+    <ClInclude Include="builtin_apply.hpp" />
+    <ClInclude Include="builtin_boolean.hpp" />
+    <ClInclude Include="builtin_bytecount.hpp" />
+    <ClInclude Include="builtin_comparsion.hpp" />
+    <ClInclude Include="builtin_d.hpp" />
+    <ClInclude Include="builtin_det.hpp" />
+    <ClInclude Include="builtin_divide.hpp" />
+    <ClInclude Include="builtin_exp.hpp" />
+    <ClInclude Include="builtin_expand.hpp" />
+    <ClInclude Include="builtin_extendedgcd.hpp" />
+    <ClInclude Include="builtin_factorial.hpp" />
+    <ClInclude Include="builtin_factorinteger.hpp" />
+    <ClInclude Include="builtin_findroot.hpp" />
+    <ClInclude Include="builtin_fromdigits.hpp" />
+    <ClInclude Include="builtin_gcd.hpp" />
+    <ClInclude Include="builtin_graphics.hpp" />
+    <ClInclude Include="builtin_holdform.hpp" />
+    <ClInclude Include="builtin_integerdigits.hpp" />
+    <ClInclude Include="builtin_lcm.hpp" />
+    <ClInclude Include="builtin_length.hpp" />
+    <ClInclude Include="builtin_list.hpp" />
+    <ClInclude Include="builtin_map.hpp" />
+    <ClInclude Include="builtin_minus.hpp" />
+    <ClInclude Include="builtin_n.hpp" />
+    <ClInclude Include="builtin_nest.hpp" />
+    <ClInclude Include="builtin_nestlist.hpp" />
+    <ClInclude Include="builtin_nintegrate.hpp" />
+    <ClInclude Include="builtin_numericq.hpp" />
+    <ClInclude Include="builtin_outputforms.hpp" />
+    <ClInclude Include="builtin_parametricplot.hpp" />
+    <ClInclude Include="builtin_part.hpp" />
+    <ClInclude Include="builtin_plot.hpp" />
+    <ClInclude Include="builtin_plus.hpp" />
+    <ClInclude Include="builtin_power.hpp" />
+    <ClInclude Include="builtin_primeq.hpp" />
+    <ClInclude Include="builtin_randomchoice.hpp" />
+    <ClInclude Include="builtin_range.hpp" />
+    <ClInclude Include="builtin_rational.hpp" />
+    <ClInclude Include="builtin_rule.hpp" />
+    <ClInclude Include="builtin_set.hpp" />
+    <ClInclude Include="builtin_sqrt.hpp" />
+    <ClInclude Include="builtin_table.hpp" />
+    <ClInclude Include="builtin_times.hpp" />
+    <ClInclude Include="builtin_together.hpp" />
+    <ClInclude Include="builtin_total.hpp" />
+    <ClInclude Include="builtin_trigonometric.hpp" />
+    <ClInclude Include="codeform.hpp" />
+    <ClInclude Include="color.hpp" />
+    <ClInclude Include="constant_e.hpp" />
+    <ClInclude Include="constant_pi.hpp" />
+    <ClInclude Include="enviroment.hpp" />
+    <ClInclude Include="enviroment_fwd.hpp" />
+    <ClInclude Include="expression_tree.hpp" />
+    <ClInclude Include="expression_tree_fwd.hpp" />
+    <ClInclude Include="expression_tree_util.hpp" />
+    <ClInclude Include="fullform.hpp" />
+    <ClInclude Include="graphics.hpp" />
+    <ClInclude Include="graphics_object.hpp" />
+    <ClInclude Include="graphics_primitive.hpp" />
+    <ClInclude Include="include_builtin_functions.hpp" />
+    <ClInclude Include="inputform.hpp" />
+    <ClInclude Include="lexer.hpp" />
+    <ClInclude Include="list_structure_parser.hpp" />
+    <ClInclude Include="matrix.hpp" />
+    <ClInclude Include="mpirxx_include.hpp" />
+    <ClInclude Include="function_options.hpp" />
+    <ClInclude Include="parser_expression_tree.hpp" />
+    <ClInclude Include="symbol.hpp" />
+    <ClInclude Include="symbol_map.hpp" />
+    <ClInclude Include="util.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="builtin_log.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
