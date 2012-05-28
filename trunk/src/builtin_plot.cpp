@@ -81,7 +81,7 @@ expression_tree Plot(const expression_tree::operands_t& ops_to_copy, enviroment&
         plot_impl::plotted_points_t::iterator end = current_plotted_points.end();
         --end;
 
-        for ( plot_impl::plotted_points_t::iterator it = current_plotted_points.begin(); it != end; /**/) {
+        for ( plot_impl::plotted_points_t::iterator it = begin; it != end; /**/) {
 
             const plot_impl::plotted_points_t::value_type left_point = *it;
             const plot_impl::plotted_points_t::value_type right_point = *(++it); //implicit increment

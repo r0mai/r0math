@@ -4,31 +4,18 @@
 
 #include "util.hpp"
 
-#include "builtin_det.hpp"
+#include "polynomial.hpp"
 #include <algorithm>
+#include <array>
 
 int main() {
 
-    //std::vector<int>
+	std::array<int, 3> coeff = {{1,2,3,0,0}};
 
-    //r0::builtin::det_impl::inversion_number();
-    /*
-    const int n = 5;
-    
-    std::vector<int> m(n);
+	r0::single_variable_polynomial<int> p1( coeff );
 
-    for ( unsigned i = 0; i < n; ++i ) {
-        m[i] = i;
-    }
+	std::cout << p1 << std::endl;
 
-    while ( std::next_permutation( m.begin(), m.end() ) ) {
-        std::cout << "{" << m[0];
-        for ( unsigned i = 1; i < n; ++i ) {
-            std::cout << ", " << m[i];
-        }
-        std::cout << "}, " << r0::builtin::det_impl::inversion_number(m) << "\n";
-    }
-    */
     r0::enviroment e;
     return e.run();
 }

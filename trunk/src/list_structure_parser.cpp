@@ -102,7 +102,7 @@ unsigned find_closing_brace(const std::string& pattern, int open_brace_position)
     assert( pattern[open_brace_position] == '{' );
 
     int nest_level = 1;
-    for ( int i = open_brace_position+1; i < pattern.size(); ++i ) {
+    for ( int i = open_brace_position+1; i < static_cast<int>(pattern.size()); ++i ) {
         const char ch = pattern[i];
         switch ( ch ) {
         case '{':
@@ -113,6 +113,7 @@ unsigned find_closing_brace(const std::string& pattern, int open_brace_position)
             if ( nest_level == 0 ) {
                 return i;
             }
+            break;
         }
 
     }
