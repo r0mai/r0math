@@ -50,6 +50,7 @@ void expression_tree::copy_to_this(const expression_tree& other) {
     default:
         std::cout << "type : " << type << std::endl;
         assert(false && "default branch invoked");
+        break;
     }
 }
 

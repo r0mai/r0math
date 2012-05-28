@@ -138,6 +138,7 @@ expression_tree parser_expression_tree::to_expression_tree() const {
         return expression_tree(); 
         break;
     }
+    return expression_tree();
 }
 
 } //namespace r0

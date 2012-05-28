@@ -559,8 +559,8 @@ void hsl_to_rgb(double h, double s, double l, double& red, double& green, double
     double tmp2 = ((l<=0.5) ? l*(1.0+s) : l+s-(l*s));
     double tmp1 = 2.0*l-tmp2;
 
-    boost::array<double, 3> t3 = { h+1.0/3.0, h, h-1.0/3.0 };
-    boost::array<double, 3> clr = { 0., 0., 0. };
+    boost::array<double, 3> t3 = {{ h+1.0/3.0, h, h-1.0/3.0 }};
+    boost::array<double, 3> clr = {{ 0., 0., 0. }};
 
     for ( int i = 0; i < 3; ++i ) {
         if (t3[i] < 0) {
