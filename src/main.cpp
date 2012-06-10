@@ -6,11 +6,11 @@
 
 #include "polynomial.hpp"
 #include <algorithm>
-#include <array>
+#include <boost/array.hpp>
 
 int main() {
 
-	std::array<int, 3> coeff = {{1,2,3,0,0}};
+	boost::array<int, 3> coeff = {{1,2,3}};
 
 	r0::single_variable_polynomial<int> p1( coeff );
 
