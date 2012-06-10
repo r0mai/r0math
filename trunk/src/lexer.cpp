@@ -14,7 +14,7 @@ namespace qi = boost::spirit::qi;
 
 namespace r0 {
 
-
+//TODO rewrite this from scratch
 template<class Iterator>
 struct main_grammar : qi::grammar<Iterator, parser_expression_tree(), spirit::ascii::blank_type> {    
 
